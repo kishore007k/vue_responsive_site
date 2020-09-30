@@ -17,14 +17,16 @@
 </template>
 
 <script>
-export default {};
+export default {
+
+}
 </script>
 
 <style lang="scss" scoped>
 .nav {
   height: 20vh;
   max-width: 100%;
-  display: flex;
+  display: block;
   flex-direction: column;
   background: #333;
   color: #fff;
@@ -39,7 +41,8 @@ export default {};
 
 .nav-menu {
   display: block;
-  width: 100%;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .nav-menu-list {

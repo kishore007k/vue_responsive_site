@@ -1,8 +1,8 @@
 <template>
-<div id="nav">
+<div id="app">
   <div class="view-container">
-    <DesktopNav class="desktop-nav" />
-    <MobileNav class="mobile-nav" />
+    <DesktopNav class="desktop" />
+    <MobileNav class="mobile" />
     <router-view />
   </div>
 </div>
@@ -39,12 +39,16 @@ body {
   margin: 0 auto;
 }
 
-@media screen and (max-width: 420px) {
-  .desktop-nav {
-    display: block;
+.mobile {
+  display: none;
+}
+
+@media (min-width: 1096px) {
+  .mobile {
+    display: flex;
   }
 
-  .mobile-nav {
+  .desktop {
     display: none;
   }
 }
