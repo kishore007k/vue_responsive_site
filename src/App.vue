@@ -1,30 +1,41 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+<div id="nav">
+  <MobileNav class="mobile-nav" />
+  <div class="view-container">
+    <router-view />
   </div>
-  <router-view />
+</div>
 </template>
 
+<script>
+import MobileNav from '@/components/MobileNav'
+
+export default {
+  components: {
+    MobileNav
+  }
+}
+</script>
+
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
 }
 
-#nav {
-  padding: 30px;
+body {
+  background: #ddd;
+}
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+@media screen and (max-width: 420px) {
+  .dektop-nav {
+    display: none;
+  }
 
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+  .mobile-nav {
+    display: block;
   }
 }
 </style>
