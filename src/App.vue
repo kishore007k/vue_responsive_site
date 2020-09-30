@@ -1,20 +1,23 @@
 <template>
 <div id="nav">
-  <MobileNav class="mobile-nav" />
   <div class="view-container">
+    <DesktopNav class="desktop-nav" />
+    <MobileNav class="mobile-nav" />
     <router-view />
   </div>
 </div>
 </template>
 
 <script>
-import MobileNav from '@/components/MobileNav'
+import DesktopNav from "@/components/DesktopNav";
+import MobileNav from "@/components/MobileNav";
 
 export default {
   components: {
+    DesktopNav,
     MobileNav
   }
-}
+};
 </script>
 
 <style lang="scss">
@@ -29,13 +32,20 @@ body {
   background: #ddd;
 }
 
+.view-container {
+  display: block;
+  max-width: 1140px;
+  min-height: 100vh;
+  margin: 0 auto;
+}
+
 @media screen and (max-width: 420px) {
-  .dektop-nav {
-    display: none;
+  .desktop-nav {
+    display: block;
   }
 
   .mobile-nav {
-    display: block;
+    display: none;
   }
 }
 </style>

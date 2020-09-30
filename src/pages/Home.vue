@@ -10,7 +10,7 @@
     </div>
   </div>
   <div class="card-content">
-    <p class="card-content-para">
+    <p class="card-content-para para">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
       placeat inventore eum officia velit esse vero, tempore distinctio
       laborum vitae ipsum, impedit, libero quae hic numquam labore quisquam
@@ -50,6 +50,10 @@
   </div>
 </div>
 </template>
+
+<script>
+export default {};
+</script>
 
 <style lang="scss" scoped>
 .about-card {
@@ -132,6 +136,10 @@
 .first h3 {
   font-size: 20px;
   font-weight: 500;
+
+  &:nth-child(2) {
+    text-align: start;
+  }
 }
 
 h5 {
@@ -145,6 +153,8 @@ p {
 }
 
 .para {
+  width: 90%;
+  margin: 0 auto;
   font-weight: 300;
   padding-bottom: 10px;
 }
