@@ -17,9 +17,7 @@
 </template>
 
 <script>
-export default {
-
-}
+export default {};
 </script>
 
 <style lang="scss" scoped>
@@ -74,5 +72,11 @@ export default {
 .logo {
   width: 100%;
   padding-bottom: 10px;
+}
+
+@media (max-width: 420px) {
+  .nav {
+    display: block;
+  }
 }
 </style>

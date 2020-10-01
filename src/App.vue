@@ -42,14 +42,4 @@ body {
 .mobile {
   display: none;
 }
-
-@media (min-width: 1096px) {
-  .mobile {
-    display: flex;
-  }
-
-  .desktop {
-    display: none;
-  }
-}
 </style>

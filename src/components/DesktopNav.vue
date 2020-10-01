@@ -26,6 +26,12 @@ export default {};
 }
 
 .logo {
-  width: 120px;
+  width: 100px;
+}
+
+@media (min-width: 420px) {
+  .nav {
+    display: none;
+  }
 }
 </style>
